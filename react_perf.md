@@ -81,6 +81,117 @@ Note: Audit the crap site with Lighthouse, webpagetest.org. Build agenda from th
 
 # Resource Hints and Fonts
 
+-v-
+
+## Webfonts
+
+<ul class="plus-minus">
+  <li class="plus">Hosted on fast and reliable CDNs</li>
+  <li class="plus">Can provide optimized variants based on user's browser</li>
+  <li class="minus">Minumum of 2 separate requests</li>
+  <li class="minus">Can't use resource hints</li>
+  <li class="minus">Doesn't take advantage of HTTP2 multiplexing</li>
+  <li class="minus">No control over FOUT or FOIT</li>
+</ul>
+
+-v-
+
+## Loading Google Fonts
+
+```html
+<link href="https://fonts.googleapis.com/css?family=Muli:400"
+      rel="stylesheet">
+```
+
+<img src="./images/webfonts_before.png" alt="Google fonts load waterfall showing wasted time">
+
+-v-
+
+
+<img src="./images/resource-hints.jpg_large" alt="Resource hints cheatsheet find pdf at https://storage.googleapis.com/resource-hints/resource-hints-cheatsheet.pdf" />
+
+<small>https://twitter.com/addyosmani/status/743571393174872064?lang=en</small>
+
+Note: pdf version of this is in the replies to this tweet
+
+-v-
+
+## Loading Google Fonts with preconnect to fonts.gstatic.com
+
+```html
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Muli:400"
+      rel="stylesheet">
+```
+
+<img src="./images/webfonts_preconnect.png" alt="Google fonts load waterfall showing preconnect">
+
+-v-
+
+## Self-Hosting Fonts
+
+```html
+<link as="font" type="font/woff2"
+  href="./fonts/muli-v12-latin-regular.woff2" crossorigin>
+
+<link as="font" type="font/woff2"
+  href="./fonts/muli-v12-latin-700.woff2" crossorigin>
+```
+
+Note: This alone does not fix perf problem.
+
+-v-
+
+## Preloading self-hosted fonts
+
+```html
+<link rel="preload" as="font" type="font/woff2"
+  href="./fonts/muli-v12-latin-regular.woff2" crossorigin>
+
+<link rel="preload" as="font" type="font/woff2"
+  href="./fonts/muli-v12-latin-700.woff2" crossorigin>
+```
+
+<img src="./images/font_preload.png" alt="Self-hosted waterfall showing preload">
+
+<small>Note that `preload` loads a resource whether used or not. Only preload resources that are needed on a particular page.</small>
+
+Note: `rel="preload"` tells the browser to declaratively fetch the resource but not “execute” it (our CSS will queue usage). `as="font"` tells the browser what it will be downloading so that it can set an appropriate priority. Without it, the browser would set a default low priority. `type="font/woff2` tells the browser the file type so that it only downloads the resource if it supports that file type. `crossorigin` is required because fonts are fetched using anonymous mode CORS.
+
+-v-
+
+## FOIT
+
+<img src="./images/FOIT.png" alt="FOIT in action — note the missing navbar text in the filmstrip screenshot (throttled to slow 3G)">
+
+Note: FOIT in action — note the missing navbar text in the filmstrip screenshot (throttled to slow 3G)
+
+-v-
+
+## `font-display`
+
+<img src="./images/font-display.png" alt="comparison of different font-display values" width="80%">
+
+<small>https://font-display.glitch.me/</small>
+
+Note: add the `font-display` property to the `@font-face` declaration
+
+-v-
+
+## subset
+
+- The [subfont](https://github.com/Munter/subfont) npm package also dynamically subsets your fonts.
+- Are you a fan of Gatsby? There’s even a [subfont plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-subfont/) for it.
+
+-v-
+
+# Exercise
+
+<video autoplay loop playsinline muted>
+  <source src="/images/hamster.mp4" type="video/mp4">
+  Sorry, your browser doesn't support embedded videos.
+</video>
+
 ---
 
 # Service Workers for Performance
