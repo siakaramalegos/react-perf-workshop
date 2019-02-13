@@ -42,4 +42,4 @@ Intermediate React knowledge, Node/npm installed, Git installed, basic command l
 
 ## Slide Controls
 
-To advance the slides, use `n` for next and `p` for previous. The right arrow jumps to the next section (and left for previous section). Up and down advance through slides within a section.
+To advance the slides, use `n` for next and `p` for previous. The right arrow jumps to the next section (and left for previous section). Up and down to advance through slides within a section.
