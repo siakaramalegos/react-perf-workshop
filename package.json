@@ -1,0 +1,25 @@
+{
+  "name": "react-perf-workshop",
+  "version": "1.0.0",
+  "description": "- [Abstract](#abstract) - [Prerequisites](#prerequisites) - [About the trainers](#about-the-trainers) - [Slide controls](#slide-controls)",
+  "main": "index.js",
+  "scripts": {
+    "start": "reveal-md react_perf.md --watch",
+    "build": "rm -rf build && reveal-md react_perf.md --static build --static-dirs=images && mkdir build/_assets && cp style.css build/_assets && touch build/.nojekyll",
+    "deploy": "gh-pages -d build --dotfiles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siakaramalegos/react-perf-workshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siakaramalegos/react-perf-workshop/issues"
+  },
+  "homepage": "https://github.com/siakaramalegos/react-perf-workshop#readme",
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}

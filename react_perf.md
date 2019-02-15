@@ -290,7 +290,7 @@ Note: (1) Many people have their server hijack the request and serve the best im
 # Exercise
 
 <video autoplay loop>
-  <source src="/images/arnold_cats.mp4" type="video/mp4">
+  <source src="./images/arnold_cats.mp4" type="video/mp4">
   Sorry, your browser doesn't support embedded videos.
 </video>
 
@@ -405,7 +405,7 @@ Note: add the `font-display` property to the `@font-face` declaration
 # Exercise
 
 <video autoplay loop playsinline muted>
-  <source src="/images/hamster.mp4" type="video/mp4">
+  <source src="./images/hamster.mp4" type="video/mp4">
   Sorry, your browser doesn't support embedded videos.
 </video>
 
