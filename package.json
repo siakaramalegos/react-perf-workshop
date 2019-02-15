@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "reveal-md react_perf.md --watch",
-    "build": "rm -rf build && reveal-md react_perf.md --static build --static-dirs=images && mkdir build/_assets && cp style.css build/_assets",
-    "deploy": "gh-pages -d build"
+    "build": "rm -rf build && reveal-md react_perf.md --static build --static-dirs=images && mkdir build/_assets && cp style.css build/_assets && touch build/.nojekyll",
+    "deploy": "gh-pages -d build --dotfiles"
   },
   "repository": {
     "type": "git",
