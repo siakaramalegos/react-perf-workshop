@@ -3,7 +3,7 @@
 - [Abstract](#abstract)
 - [Prerequisites](#prerequisites)
 - [About the trainers](#about-the-trainers)
-- [Slide controls](#slide-controls)
+- [Slides and controls](#slides-and-controls)
 
 ## Abstract
 Getting performance right is hard, even when you have the luxury of starting an app from scratch. It's even harder when you need to improve the performance of existing apps, as is so often the case. In this workshop, Sia Karamalegos and Jason Lengstorf will lead you through the process of:
@@ -40,6 +40,6 @@ Intermediate React knowledge, Node/npm installed, Git installed, basic command l
 
 [Twitter](https://twitter.com/thegreengreek) | [Website](https://siakaramalegos.github.io/) | [Github](https://github.com/siakaramalegos) | [Blog](https://medium.com/@thegreengreek) | [StackOverflow](https://stackoverflow.com/users/5049215/sia?tab=profile) | [LinkedIn](https://www.linkedin.com/in/karamalegos)
 
-## Slide Controls
+## Slides and Controls
 
-To advance the slides, use `n` for next and `p` for previous. The right arrow jumps to the next section (and left for previous section). Up and down to advance through slides within a section.
+The slides are deployed [here](https://siakaramalegos.github.io/react-perf-workshop/#/). To advance the slides, use `n` for next and `p` for previous. The right arrow jumps to the next section (and left for previous section). Up and down to advance through slides within a section.
