@@ -85,7 +85,7 @@ Note: pdf version of this is in the replies to this tweet
 ## Latency Case Study: Fonts
 
 ```css
-@import url(’https://fonts.googleapis.com/css?family=Open+Sans|Muli');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Muli');
 
 h1 {
   font-family: 'Open Sans', sans-serif;
