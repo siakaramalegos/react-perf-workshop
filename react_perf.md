@@ -109,6 +109,12 @@ Add lodash to the chart reducer to show how to make sure we’re only including 
 
 ---
 
+<img style="border:none;box-shadow:none;" src="./images/Workbox-Logo-Grey.svg" />
+
+<small>[Docs](https://developers.google.com/web/tools/workbox/)</small>
+
+---
+
 # Latency and resource hints
 
 ---
