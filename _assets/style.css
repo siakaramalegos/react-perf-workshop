@@ -2,7 +2,7 @@
 /**
  * Based off of White theme for reveal.js By Hakim El Hattab, http://hakim.se
  */
-@import url('https://fonts.googleapis.com/css?family=Muli|Oswald');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Oswald');
 
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6{
   color: #fff; }
@@ -15,19 +15,20 @@ body {
   background-color: #fff; }
 
 .reveal {
-  font-family: "Muli", Helvetica, sans-serif;
+  font-family: "Montserrat", Helvetica, sans-serif;
   font-size: 36px;
-  font-weight: normal;
+  font-weight: 300;
   color: #222; }
 .reveal::after {
   background-color: #fff;
-  color: #00A6BF;
-  content: '@NikkitaFTW @jlengstorf @thegreengreek';
+  color: rebeccapurple;
+  content: '@jlengstorf \00a0\00a0 @NikkitaFTW \00a0\00a0 @TheGreenGreek';
   position: absolute;
   bottom: 0;
   font-size: 0.8em;
   font-style: normal;
   padding: 0.4em;
+  text-align: center;
   width: 100%;
 }
 
@@ -57,7 +58,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   /* color: #448BC7; */
-  color: #00A6BF;
+  color: rebeccapurple;
   font-family: "Oswald", Helvetica, sans-serif;
   font-weight: 800;
   line-height: 1.2;
@@ -79,8 +80,9 @@ body {
   font-size: 3.5em;
 }
 .reveal h2.subtitle {
-  color: #222;
-  font-family: "Muli", Helvetica, sans-serif;
+  color: rgb(224, 214, 235);
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-size: 1.4em;
 }
 .reveal .translucent {
   opacity: 0.65;
@@ -162,7 +164,7 @@ body {
   width: 70%;
   margin: 20px auto;
   padding-left: 20px;
-  border-left: 3px solid #00A6BF;
+  border-left: 3px solid rebeccapurple;
   text-align: left;
   font-style: italic;
   background: rgba(255, 255, 255, 0.05); }
@@ -239,7 +241,10 @@ body {
  *********************************************/
 .reveal a {
   /* color: #2a76dd; */
-  color: #00A6BF;
+  border-bottom: 1px solid rgb(224, 214, 235);
+  box-shadow: rgb(224, 214, 235) 0px -2px 0px 0px inset;
+  color: rebeccapurple;
+  margin-right: 0.2rem;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -247,7 +252,7 @@ body {
 
 .reveal a:hover {
   /* color: #6ca0e8; */
-  color: #1AC0D9;
+  background: rgb(224, 214, 235);
   text-shadow: none;
   border: none; }
 
@@ -276,7 +281,7 @@ body {
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
   /* border-color: #2a76dd; */
-  border-color: #00A6BF;
+  border-color: rebeccapurple;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -284,7 +289,7 @@ body {
  *********************************************/
 .reveal .controls {
   /* color: #2a76dd;  */
-  color: #00A6BF;
+  color: rebeccapurple;
 }
 
 /*********************************************
@@ -293,7 +298,7 @@ body {
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
   /* color: #2a76dd;  */
-  color: #00A6BF;
+  color: rebeccapurple;
 }
 
 .reveal .progress span {
@@ -304,7 +309,6 @@ body {
 /*********************************************
  * CUSTOM STYLES
  *********************************************/
-
 ul.plus-minus {
   list-style: none;
 }
