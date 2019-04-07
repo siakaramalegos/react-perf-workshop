@@ -4,7 +4,7 @@ verticalSeparator: -v-
 highlightTheme: github
 ---
 
-<!-- .slide: data-background="./images/hero_bg.jpg" -->
+<!-- .slide: data-background-color="#673399" -->
 <h1 class="title dark-background"><span class="translucent">React App</span> Performance Tuning</h1>
 <h2 class="subtitle">Jason Lengstorf + Sara Vieira <br>+ Sia Karamalegos</h2>
 
@@ -224,7 +224,6 @@ Note: `rel="preload"` tells the browser to declaratively fetch the resource but 
 
 ---
 
-<!-- .slide: data-background="./images/hero_bg.jpg" -->
+<!-- .slide: data-background-color="#673399" -->
 <h1 class="title dark-background">Thanks!</h1>
-Slides, resources, and more at <a href="https://bit.ly/siaspeaks" class="dark-background">bit.ly/siaspeaks</a>
-
+<!-- Slides, resources, and more at <a href="https://bit.ly/siaspeaks" class="dark-background">bit.ly/siaspeaks</a> -->
