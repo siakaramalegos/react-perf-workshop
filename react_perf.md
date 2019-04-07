@@ -2,20 +2,29 @@
 theme: style.css
 verticalSeparator: -v-
 highlightTheme: github
+revealOptions:
+  transition: none
 ---
 
 <!-- .slide: data-background-color="#673399" -->
-<h1 class="title dark-background"><span class="translucent">React App</span> Performance Tuning</h1>
+<h1 class="title dark-background"><span class="translucent">Advanced React</span> Performance</h1>
 <h2 class="subtitle">Jason Lengstorf + Sara Vieira <br>+ Sia Karamalegos</h2>
 
 ---
 
-## Meet the speakers
+## Meet today’s teachers
+
+- Sara Vieira ([@NikkitaFTW](https://twitter.com/NikkitaFTW))
+- Jason Lengstorf ([@jlengstorf](https://twitter.com/jlengstorf))
 
 ---
 
 
-## introduce yourself to your neighbors
+## Coding is more fun with friends
+
+- 👋 Introduce yourself to your neighbors <!-- .element: class="fragment" -->
+- 👯‍♀️ Pair programming is a great option! <!-- .element: class="fragment" -->
+- 💬 Ask lots of questions <!-- .element: class="fragment" -->
 
 Note: Suggest pair programming and give them an opportunity to change seats.
 
@@ -23,70 +32,23 @@ Note: Suggest pair programming and give them an opportunity to change seats.
 
 ## Let’s look at our app
 
-https://github.com/jlengstorf/advanced-react-perf?
-
-Notes:
-
-Steps in this workshop:
-
-1. Assessing an existing React app (60m)
-  Install `webpack-bundle-analyzer` to see what’s in the bundle
-  DevTools (lighthouse) to see how it performs now — mention webpagetest.org
-  Review webpack config (e.g. production bundles, analyzer, etc.)
-  Add terser
-  Show difference in React/React DOM bundle sizes after turning on production mode
-  CSS minification — have configured but commented out
-  Gzip/brotli — have configured but commented out
-2. Diagnosing performance problems & prioritizing highest-impact solution (15m)
-  Workshop w/the class. Outcome needs to match the list of fixes we want to implement. :)
-  Identify and walk through low-hanging fruit
-3. Lazy loading resources & components with React.lazy and Suspense (40m)
-  Set up the Router to use React.lazy and Suspense
-  Use React.lazy to load Code Mirror
-  Show how this creates code splitting and explain what that means
-4. Leveraging service workers for performance (30m)
-  https://developers.google.com/web/tools/workbox/guides/codelabs/webpack
-5. Seamlessly preloading and prefetching assets (35m)
-  Let’s preload fonts
-  Set up preloading for Dank Mono files
-  Font-display: swap
-  Move Google Fonts to HTML vs. @import
-  Set up preconnect for Google Fonts (Montserrat)
-  Discuss the trade-offs of using local Google Fonts vs. hosted fonts (e.g. cache)
-  Don’t use icon fonts; use SVGs (react-icons)
-6. The future of fonts (10m)
-  Explain what subfont is; don’t actually do it
-  You can do this in Gatsby or locally
-  Talk about font variants
-7. Automatically optimizing images (20m)
-  We can add svgo https://github.com/rpominov/svgo-loader
-  https://www.npmjs.com/package/imagemin-webpack-plugin
-8. Mitigating the performance impact of third-party scripts (45m)
-  Use request blocking to show how big an impact a given script
-  Performance tab, click the “reload” button to get an initial load
-  Block reqeusts to domain(s) using devtools
-  Click the “reload” perf button again to get a new measurement
-  You can now compare between the two loads to see the difference
-  Show the secret menu (press shift six times in the “experiments” settings tab)
-  Add a Twitter embed; break the script load to _not_ be async
-  Refactor to be async; show before and after on the network timeline
-  Can we find that site that couldn’t get GDPR compliance and shipped a WAY better website to the EU?
-  Show how to use the “show third-party badges” thing in Chrome DevTools
-9. Using psychology to make an app feel faster than it actually is (30m)
-  Fancy loaders make people think things are faster
-  Leave blank (no loader)
-  Add a loader
-  Staged loading (don’t block the render)
-
-Things we didn’t promise that should probably be solved:
-Refactor to use date-fns instead of Moment to show how much smaller the bundle can be
-Add lodash to the chart reducer to show how to make sure we’re only including what we actually use
-
-
+https://git.io/advanced-react-perf
 
 ---
 
-## Why's my app so slow???
+## Why’s my app so slow?
+
+Let’s debug it! <!-- .element: class="fragment" -->
+
+---
+
+## Step 0: Understand the problems
+
+- Analyze the app assets <!-- .element: class="fragment" -->
+- Look at performance audit reports <!-- .element: class="fragment" -->
+- Identify opportunities to improve <!-- .element: class="fragment" -->
+- Prioritize the list using an impact vs. effort matrix <!-- .element: class="fragment" -->
+- Make a plan of action! <!-- .element: class="fragment" -->
 
 ---
 
@@ -123,7 +85,7 @@ Note: pdf version of this is in the replies to this tweet
 ## Latency Case Study: Fonts
 
 ```css
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Muli');
+@import url(’https://fonts.googleapis.com/css?family=Open+Sans|Muli');
 
 h1 {
   font-family: 'Open Sans', sans-serif;
