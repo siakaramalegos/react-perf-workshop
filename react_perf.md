@@ -216,6 +216,14 @@ Note: `rel="preload"` tells the browser to declaratively fetch the resource but 
 
 ---
 
+## Want a mini-course in responsive images?
+
+File formats, `srcset`'s, and `<picture>`'s, oh my!
+
+https://siakaramalegos.github.io/responsive-images-slides/#/
+
+---
+
 # Script execution costs
 
 ---
