@@ -63,7 +63,7 @@ Let’s debug it! <!-- .element: class="fragment" -->
 
 ---
 
-# Lazy-loading resource and components
+# Lazy-loading resources and components
 
 ---
 
