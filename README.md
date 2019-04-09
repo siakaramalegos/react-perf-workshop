@@ -43,3 +43,9 @@ Intermediate React knowledge, Node/npm installed, Git installed, basic command l
 ## Slides and Controls
 
 The slides are deployed [here](https://siakaramalegos.github.io/react-perf-workshop/#/). To advance the slides, use `n` for next and `p` for previous. The right arrow jumps to the next section (and left for previous section). Up and down to advance through slides within a section.
+
+
+## Links and Resources
+
+- [Making Google Fonts Faster](https://medium.com/clio-calliope/making-google-fonts-faster-aadf3c02a36d)
+- [Loading Fonts With Webpack](https://chriscourses.com/blog/loading-fonts-webpack)
